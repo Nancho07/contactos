@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+<head>
+    <title>Blank Cordova Mobile App Project Template (Lite)</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> 
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="plugins/jquery-confirm/jquery-confirm.css">
+    <link rel="stylesheet" href="plugins/tables/datatables.min.css"/>
+    <style>
+        /* following two viewport lines are equivalent to the meta viewport statement above, needed for Windows */
+        /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+    </style>
+
+    <script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls, added during build -->
+    <script src="js/socket.js"></script> 
+    <script src="plugins/jquery/jquery.min.js"></script> 
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/jquery-confirm/jquery-confirm.js"></script> 
+    <script src="plugins/jquery-confirm/alerta.js"></script>
+    <script src="plugins/tables/datatables.min.js"></script>
+    <script src="js/app.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
+    <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
+</head>
+
+<body>
+
+    <p id="saludo"></p>
+    <div class="col-sm-12 col-md-6 col-lg-4">
+        <button id="reload">Recargar</button>
+    </div>
+      <table id="table-gamers" class="table isSearch" cellspacing="0">
+        <thead>
+          <tr class="table-heads ">
+            <th class="head-item mbr-fonts-style display-7">F. Creaci&oacute;n</th>
+            <th class="head-item mbr-fonts-style display-7">Nombre</th>
+            <th class="head-item mbr-fonts-style display-7">Tel&eacute;fono</th>
+            <th class="head-item mbr-fonts-style display-7">Mensaje</th>
+          </tr>
+        </thead>
+        <tbody id="gamers_table"></tbody>
+      </table>
+    </body>
+</html>
