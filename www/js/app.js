@@ -69,7 +69,7 @@ $(document).ready(function(){
     socket.on("contactos",function(datos){
         if(datos.length > 0){
            datos.forEach(function(values){
-             var gamer ='<tr><td class="body-item mbr-fonts-style display-7">'+
+             var contacto ='<tr><td class="body-item mbr-fonts-style display-7">'+
                             values.fecha_creacion+
                             '</td><td class="body-item mbr-fonts-style display-7">'+
                             values.nombre+
@@ -77,18 +77,18 @@ $(document).ready(function(){
                             values.telefono+
                             '</td><td class="body-item mbr-fonts-style display-7">'+
                             values.mensaje+'</td></tr>';
-             $("#gamers_table").append(gamer);
+             $("#contact_table").append(contacto);
            });
          }else{
-           var gamer ='';
-           $("#gamers_table").append(gamer);
+           var contacto ='';
+           $("#contact_table").append(contacto);
          }
      });
     $("#reload").click(function(){
        socket.emit("recargar");
      });
     
-    $('#table-gamers').DataTable( {
+    $('#table-contact').DataTable( {
        "language": {
            "lengthMenu": "Mostrando _MENU_ registros por página",
            "zeroRecords": "Nose encontro nada - lo siento",
