@@ -81,7 +81,14 @@ $(document).ready(function(){
              $("#contact_table").append(contacto);
            });
          }else{
-           var contacto ='';
+           var contacto ='<tr><td class="body-item mbr-fonts-style display-7">'+
+			"No"+
+			'</td><td class="body-item mbr-fonts-style display-7">'+
+			"hay"+
+			'</td><td class="body-item mbr-fonts-style display-7">'+
+			"registros"+
+			'</td><td class="body-item mbr-fonts-style display-7">'+
+			'</td></tr>';
            $("#contact_table").append(contacto);
          }
      });
