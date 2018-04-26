@@ -67,6 +67,7 @@ $(document).ready(function(){
          delServidor(data);
      });
     socket.on("contactos",function(datos){
+	$("#contact_table").empty();
         if(datos.length > 0){
            datos.forEach(function(values){
              var contacto ='<tr><td class="body-item mbr-fonts-style display-7">'+
